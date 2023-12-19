@@ -1,0 +1,32 @@
+RSA-Encryptor-Decryptor
+
+Overview
+Implementing RSA encryption and decryption for secure text communication. This repository contains a Python implementation of the RSA algorithm, allowing users to encrypt and decrypt text messages using public and private keys.
+
+Features
+Key Generation: Automated RSA key pair generation for seamless encryption and decryption.
+Text Encryption: Utilize the RSA public key to encrypt plain text messages securely.
+Text Decryption: Decrypt cipher text using the corresponding private key, ensuring confidentiality.
+Example Code: Clear and concise example code to guide users in integrating RSA encryption into their projects.
+Getting Started
+
+1. Clone the repository:
+git clone https://github.com/your-username/RSA-Encryptor-Decryptor.git
+
+2. Explore the example code and integrate RSA encryption into your projects.
+
+Usage:
+from rsa_encryptor_decryptor import generate_keys, encrypt, decrypt
+
+# Generate RSA key pair
+private_key_pem, public_key_pem = generate_keys()
+
+# Encrypt and Decrypt
+original_text = "Hello, RSA encryption!"
+cipher_text = encrypt(public_key_pem, original_text)
+decrypted_text = decrypt(private_key_pem, cipher_text)
+
+print(f"Original text: {original_text}")
+print(f"Cipher text: {cipher_text}")
+print(f"Decrypted text: {decrypted_text}")
+
