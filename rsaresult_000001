@@ -1,0 +1,13 @@
+from rsa_encryptor_decryptor import generate_keys, encrypt, decrypt
+
+# Generate RSA key pair
+private_key_pem, public_key_pem = generate_keys()
+
+# Encrypt and Decrypt
+original_text = "Layer Zero"
+cipher_text = encrypt(public_key_pem, original_text)
+decrypted_text = decrypt(private_key_pem, cipher_text)
+
+print(f"Original text: {original_text}")
+print(f"Cipher text: {cipher_text}")
+print(f"Decrypted text: {decrypted_text}")
